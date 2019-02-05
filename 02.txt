@@ -1,0 +1,18 @@
+Lecture 2
+All computer systems require some way to store data permanently; even so-called “diskless” systems do require access to certain files in order to boot, run and be useful. Albeit stored remotely (or in memory).
+
+More and more files have moved to the cloud.
+
+Available storage space is a scarce resource.
+
+Direct Attached Storage:
+    Most common way to access storage.
+    Hard-drives are connected directly to the server, the operating system detects the blocks and maintains a file system
+
+Network attached storage:
+    One host functions as the file server.
+    Multiple clients access the file system.
+
+Cloud Storage:
+    Reply on apis
+
