@@ -5,3 +5,9 @@ Dealing with a lot of different kind of cables is an everyday task for them.
 We learnt about horizontal and vertical scaling and the conditions where each of them become helpful.
 The different favourite laws of administrators includes my favourite Murphy's law which states "If it can happen, it will happen".
 Learning is critical.
+
+All resources are finite
+
+File sizes are not what they seem to be.
+
+Error messages are not what they seem to be.
