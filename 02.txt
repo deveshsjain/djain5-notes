@@ -16,3 +16,11 @@ Network attached storage:
 Cloud Storage:
     Reply on apis
 
+Individual disks are connected to the server using a Host Bus Adapter (HBA) using a single data/control cable and a power cable.
+
+The traditional interfaces are SCSI, SATA, PATA and Fibre Channel.
+
+The ways in which we combine and divide disks have implications on system performance and data redundancy.
+
+RAID - Redundant array of independent disks
+
