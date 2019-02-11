@@ -1,0 +1,20 @@
+Lecture 3
+
+System administrators routinely set up new systems, create new services, and need to be able to fine-tune software from the very lowest layers.
+
+Some systems are driven by their own firmware like RAID controller or Fibre Channel HBA.
+
+Every sys-admin has a preferred operating system which is a result of years of experience and familiarity.
+
+One of the most common service a sys-admin can be incharge of is a HTTP server
+
+Boot process might include the following steps:
+    Power-On Self Test(POST)
+    Execution of Primary boot loader
+    Access of the MBR
+    Execution of secondary or second-stage boot loader.
+    loading of the hypervisor and starting of the privileged doamin (dom0)
+    etc.
+
+We can define the kernel as the central component of the operating system in charge of process-, device- and memory management, facilitating access to the hardware via a small number of system calls.
+
