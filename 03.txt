@@ -18,3 +18,13 @@ Boot process might include the following steps:
 
 We can define the kernel as the central component of the operating system in charge of process-, device- and memory management, facilitating access to the hardware via a small number of system calls.
 
+Many Unix versions come in only exactly one flavor, one bundle of ker-nel plus libraries plus system utilities – the open source BSD versions andvirtually all of the “old” commercial Unix versions fall into this category.
+
+Data files that remain the sameacross multiple hosts, and, as the manual page suggests, possibly even across different hardware architectures are considered shareable.
+
+Data files that need to be individual to each host are considered un-shareable.
+
+Files that are not expected to change duringthe runtime of the system are consideredstatic.Thisincludesthekernel,allsystem libraries and binaries and many data files
+
+Files that are updated by the OS, by any running applications or byend-users at runtime, are termed variable.
+
