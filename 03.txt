@@ -28,3 +28,13 @@ Files that are not expected to change duringthe runtime of the system are consid
 
 Files that are updated by the OS, by any running applications or byend-users at runtime, are termed variable.
 
+The final purpose of the machine and the software it needs to run dictates our hardware choices, processor architecture, amount of memory and disk space, number of types of network interfaces.
+
+Changing OS later results in high costs as services have to migrated, ported and verified while the server is already in use.
+
+There is a thin line between system deployment and system configuration.
+
+At times there are good reasons to manually install software.
+
+No matter which method we use to install software, we are ex-posing our system to the risk of a software Trojan, the accidental installation of a backdoor, a piece of malware.
+
