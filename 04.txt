@@ -1,0 +1,21 @@
+Software can be classified into 2 categories:
+    System Software
+    Third Party Software
+
+Package managers provide easy and scalable installation of Software.
+
+Package managers can be used to install other package managers
+
+Most programming languages or environments come with their own package management solutions, often integrating/mixing with a buildsystem
+
+You don't get to choose, you routinely need to build from source and re-package your Software.
+
+Mirroring untrusted, unverified dependenciesdoes not solve any of our problems.
+
+Integrity verification is meaningless without assurance of trust.
+
+Dependencies are called dependencies because we depend on them.
+
+Dependency trust and integrity is recursive.
+
+Authentication is proof of identity, not proof of authorization.
