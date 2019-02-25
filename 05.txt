@@ -1,0 +1,33 @@
+7 OSI Layers
+
+IPv4 is 32 bits
+    ex. 11111111 00000000 11110000 00001111
+
+Each IPv4 consists of 4 octets.
+
+IPv4 address are divided into 2 parts:
+    Network part
+    Host part
+
+Hosts on the same domain can talk to each other without a router.
+
+Five classes of IPv4 networks:  Class A,B,C,D,E
+
+First address on the subnet= Network address
+Last address on the subnet= Broadcast address
+
+The Internet Assigned Numbers Authority (IANA) oversees global IP address/AS number allocation,root zone management etc.
+
+IPv4 address space depletion is a major worry as more and more devices are added.
+
+IPv6 are 128 bits
+i.e. 2^128 addresses
+
+Representation: 8x16 bit fields (words) in case insensitive colon hexadecimalrepresentation.
+    ex. 2031:0000:0000:030F:0000:0000:0000:130B
+
+You need brackets to distinguish a port from an address:
+    IPv4:66.163.162.9:22
+    IPv6:[2001:470:1f07:3d1::1]:22
+
+Traceroute is used to find the path the packet takes.
