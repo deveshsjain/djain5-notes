@@ -31,3 +31,8 @@ You need brackets to distinguish a port from an address:
     IPv6:[2001:470:1f07:3d1::1]:22
 
 Traceroute is used to find the path the packet takes.
+
+Ethernet is a layer 2 protocol - Data Link layer.
+
+tcpdump requires super-user privileges.
+
