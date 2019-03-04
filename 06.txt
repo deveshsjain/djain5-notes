@@ -1,0 +1,19 @@
+What happens when we execute a command?
+    local host connects to remote host
+    sends command
+    receives data
+
+Connect to remote host:
+    look up host name
+    open connection to IP address
+
+tcpdump is a packet analyzer
+
+Application Layer Protocols - SMTP, HTTP
+Transport Layer Protocols - TCP, UDP
+Network Layer Protocols - IP, ICMP
+Physical/ Link Layer Protocols - ARP
+
+ARP: Address Resolution Protocol
+ND: Neighbour Discovery
+
