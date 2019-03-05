@@ -17,3 +17,16 @@ Physical/ Link Layer Protocols - ARP
 ARP: Address Resolution Protocol
 ND: Neighbour Discovery
 
+HW1 Comments:
+do not specify -i in ssh
+
+use aws ec2 wait
+
+avoid waterfall code
+
+Repeaters- Pretty much obselete
+
+Switches use STP - Spanning Tree Protocol to communicate with all the nodes
+
+Router uses BGP
+
