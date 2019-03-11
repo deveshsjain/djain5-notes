@@ -4,5 +4,23 @@ The domain name space contains a tree of domain names
 
 Domain names are read fro left to right and seperated by  "."
 
-Ahostnamewith a domain name is known as a FQDN
+A host name with a domain name is known as a FQDN
 
+Before the DNS, the Network Information Center (NIC) at Stanford Research Institute (SRI) allocated domain names. 
+
+The domain name space is a tree; if you control one node, you control allthe branches and subtrees.
+
+There are 13 root authorities
+
+There are 13 root server addresses
+
+Uses of DNS:
+    identifying sources of SPAM
+    Detect email spoofing
+    HTTP is a request/response protocol.
+
+HTTP is a request/response protocol:
+    client sends a request to the server
+    server responds
+
+HTTP is a Transfer Protocol– serving data, not any specific text format.
