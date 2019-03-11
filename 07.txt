@@ -1,0 +1,8 @@
+AWS US-EAST-1 Region downtime leads to outages and connectivitydegradation for Atlassian’s Bitbucket, Confluence, and Jira, GitHub,MongoDB, NewVoiceMedia, Slack, Twilio, Zillow.
+
+The domain name space contains a tree of domain names
+
+Domain names are read fro left to right and seperated by  "."
+
+Ahostnamewith a domain name is known as a FQDN
+
