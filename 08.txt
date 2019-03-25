@@ -1,0 +1,43 @@
+Email is not going to be replaced
+
+More than 70% of the emails are spam
+
+SMTP codes consists of 3 digits in 5 classes:
+    1xx– Mail server has accepted the command, but does not yet takeany action. A confirmation message is required
+    2xx– Mail server has completed the task successfully without errors.
+    3xx– Mail server has understood the request, but requires furtherinformation to complete it.
+    4xx– Mail server has encountered a temporary failure. If thecommand is repeated without any change, it might be completed.           Trying again may help.
+    5xx– Mail server has encountered a fatal error. Your request can’tbe processed.
+
+An email consists of:
+    Mandatory headers
+    Optional headers
+    Body of the message
+
+SMTP uses port 25 for relaying messages from one server to another
+Mail may be relayed or processed by many servers in transit
+transport is in clear text
+Authenticity is not guaranteed
+
+The mail system is divided into 3 parts:
+    MUA
+    MTA
+    MDA
+
+Many MUAs now interpret HTML
+
+Sender Policy Framework can help detect email spoofing by identifying the list of allowed sending MXs
+
+Domain Keys Identified Mail aka DKIM can help detect email spoofing by providing a digital signature across parts of the message.
+
+Domain-based Message Authentication, Reporting and Conformance, DMARC, provides a policy of which validation mechanisms should be employed for a given domain.
+
+SSL shouldn't be used.
+
+TLS - Transport Layer Security
+
+TLS operates on Layer 6
+
+Just because a site has a valid certificate does not mean its a trustworthy site
+
+Lack of universal HTTPS exposes users to significant risks; many sitesdon’t understand the importance of authentication and encryption fornon-sensitive content.
