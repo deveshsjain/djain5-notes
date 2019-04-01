@@ -1,0 +1,41 @@
+Benefits of Automation:
+    repeatability
+    reliability
+    regularity
+    flexibility
+
+Everybody benefits from Automation
+
+Automation requires time and effort
+It increases complexity
+May lead to loss of audit trail or accountability
+
+System tools require documentation
+
+Scripting is often suitable for one individual user
+
+programming is suitable for complex to medium tasks
+
+Software development uses formal software engineering approach. It requires continuous maintenance
+
+Understand your requirements to pick the right tool
+
+Bourne shell available and reliable on most platforms
+Shell to be treated as any other programming language
+
+Use libraries available
+
+Write descriptive code, use descriptive variables and function names.
+
+Comments should explain why, not what
+
+Errors should never pass silently.
+
+More users find more bugs
+
+Efficient use of Version Control Systems is a requirement. They allow you to:
+    collaborate with others
+    simultaneously work on a code base
+    keep old versions of fileskeep a log of the who, when, what, and why of any changes
+    perform release engineering by creating branches
+
