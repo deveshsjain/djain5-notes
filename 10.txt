@@ -1,0 +1,87 @@
+Backups are just a means to accomplish one goal: to have the ability to restore data.
+
+The condition of any backup is unknown until a restore is attemped.
+    -Schrodinger
+
+Long term storage:
+    fullset of level 0 backups
+    separate set from regular backups
+    usually stored off-site
+    recovery / retrieval takes time
+    limited granularity
+    storage media considerations
+    storage media transport considerations
+    backup encryption and recovery key management
+
+Backups needed to:
+    recover data loss
+    long-term storage/archival
+
+Think of your backups asinsurance: you invest and pay for it, hoping you will never need it.
+
+Disaster recovery:
+    loss of e.g. entire file system
+    leads to downtime (of individual systems)
+    RAID may help
+    takes long time to restore
+    may require retrieval of archival backups from long-term storage
+    often involves some data loss
+
+A backup is a copy of the data. If the data is corrupt, your backup may become corrupt.
+
+Accidently deleted files should be recoverable for sometime.
+But some files if deleted, should be gone for good.
+
+dump(8)preserves files (and file attribute), so that deletion of a file can be undone.
+
+File System backup:
+Example: WAFL (Write Anywhere File Layout)
+    used by NetApp’s “Data ONTAP” OS
+    a snapshot is a read-only copy of a file system (cheap and nearinstantaneous, due to CoW)
+    uses regular snapshots (“consistency points”, every 10 seconds) to allow for speedy recovery from crashes
+
+ZFS uses a copy-on-write transactional object model (new data doesnot overwrite existing data, instead modifications are written to a newlocation with existing data being referenced), similar to WAFL.
+
+backups are most commonly done as incrementals of a filesystem,mountpoint, or directory hierarchy.
+
+Problems? Logs are the answer.
+
+Something is wrong could just be an unexpected or undesireable event.
+
+Being able to identify relevant events allows you to diagnose, predict and even prevent undesirable events.
+
+Know your applications
+Know your users
+Know your traffic patterns
+Know your systems
+
+Events
+    may occur rarely / frequently / constantly
+    can be collected in logs
+    may be comprised of other events
+    may be: something happened
+    may be: nothing (new) happened
+    
+Metrics:
+    correlation of related events
+    may help identify outliers
+    may trigger events
+    may help make (automated or interactive) decisions
+
+Understand your system performance:
+    CPU load, memory (for example:top(1),vmstat(1))
+    disk I/O (for example:iostat(1))
+    user activity (for example:ac(1),lsof(8),sa(8))
+
+Context lets you findrelevantevents in your haystack of metrics.
+
+Graphs are really helpful to understand metrics
+
+Turn events into merics by logging
+
+Context doesn't tell us everything but helps us look into what to investigate.
+
+Email is not a scalable network monitoring solution.
+Absence of a signal can itself be a signal.
+
+Most of the value of your metrics only becomes evident over time.
