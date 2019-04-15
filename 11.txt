@@ -1,0 +1,67 @@
+The entropy of an isolated system never decreases.
+
+A static system is a useless system. 
+A useful system is being used.
+
+    data is processed; files are created, modified, removed
+    software is added, upgraded, removed
+    systems are created, copied, decommissioned
+    instances / containers are even more short-lived, coming into existence and disappearing again as needed
+
+Every Sysadmin:
+    scp(1)
+    rsync(1)
+    some sort of parallelssh(1) of the above
+    switch to pull
+    add mutual authentication
+    but effectively ignore mismatches, because doing things the rightway is difficult and inconvenient
+    switch topushwith remote dæmon
+    write an inventory database
+    deploy a well-known CM system
+
+Different sets of servers have shared properties. For example, consideran HTTP server:
+    minimum server software
+    appropriate TLS specification
+    shared TLS certificate and key
+    database configuration
+    static content (HTML / JS / CSS files)
+
+CM Requirements:
+    software installation
+    service management / supervising
+    file permissions / ownership
+    static files
+    host-specific data
+    command-execution
+    data collection
+
+Group your resource into sets
+
+CM systems are complex themselves.
+CM systems are inherently trusted.
+CM systems can break everything. To the degree that you can’t unbreak things afterwards.
+
+Consider:
+    staged rollout of change sets
+    automated error detection and rollback
+    self-healing properties
+    authentication and privilege
+
+All CM operations must be idempotent
+
+CM systems should ensure changes are:
+    1.idempotent (well, that part’s on you)
+    2.only applied if needed
+    3.eventually consistent
+
+CM systems are distributed systems. As such, they are subject to the CAP Theorem:
+    Consistency: all systems managed by the CM are consistent within their respective service definition.
+    
+    Availability: the services managed by the CM are kept available, even ifno further updates or change sets can be retrieved.
+    
+    Partition tolerance: the CM system can (continue to) operate despite interruptions between its components; e.g. intermediate (coordinated)changes are not required.
+
+For CM you need:
+    network equipment
+    load balancers
+    containers
