@@ -1,0 +1,3 @@
+Security varies and depends from system to  system.
+
+Risk is the possibility of suffering from harm or loss of data
