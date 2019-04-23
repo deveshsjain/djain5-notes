@@ -1,3 +1,73 @@
 Security varies and depends from system to  system.
 
 Risk is the possibility of suffering from harm or loss of data
+
+What is lost if data is compromised:
+    access to data
+    integrity of data
+    availability of services
+    reputation
+    monetary loss
+
+Determine risk:
+    identify assets
+    identify threats
+    identify vulnerabilities
+    Determine likelyhood of damage
+    estimate cost of recovery
+    estimate cost of defence
+
+Risks are scoped and specific
+
+You can only minimize specific Risks by closing attack vectors
+
+identify:
+    what you are protecting
+    who you are protecting from
+    threats you cannot defend against
+
+Adverseries are human actors with specific goals
+
+You can't protect yourself alone. Lead by example and seek allies
+
+Always consult subject experts from outside your team
+
+Never assume any one protection mechanism is sufficient.
+Always assume the other protections you deployed can be circumvented or broken.
+
+Cryptography is not a solution to all the problems
+It may provide Security in the areas of:
+    Confidentiality
+    integrity
+    Authenticity
+
+Authentication != Authorization
+
+Two types of Cryptography:
+    Public Key - ex. RSA
+    Private Key - ex. DES
+
+Never store secrets in code
+Always use key management systems
+
+Always hash user passwords, don't encrypt them
+
+Never run services as root, always run a dedicated account.
+
+Always grant access explicitly
+
+There are different classes of vulnerabilities like memory management, race conditions, privilege escalation and confusion
+
+Don't invent your own crypto.
+
+During outsourcing, Always make a conscious decision, never blindly follow the promises without understanding the trade-offs.
+
+Embrace automation
+
+There can always be a human error involved instead of malice
+
+Keep your asset inventory accurate
+
+use multi-factor Authentication
+
+don't MITM your own users
