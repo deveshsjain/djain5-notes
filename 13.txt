@@ -1,17 +1,48 @@
-System Administration is a profession with no fixed career path.
+Respect the privacy of others.
+SysAdmins have the power but also the resposibility to safeguard users' privacy.
+
+System Administration is a profession with no fixed career path and is often learnt by experience.
+
+There can be instances where an individual may require access to another persons' data for example a teacher may need access to a students' home directory.
+
+What is legal may not always be Ethical.
+
+Ads are currently the highest profit generating business.
 
 ACM code of ethics
     Contribute to society and human well-being
 
+The Primacy of the Public:
+    We should place the interests of the public above those of personal, business or sectional interests.
+
+We are stewards of our users’ data. We are obligated to act in the public interest.
+
 The LISA Code of Ethics:
-    Professionalism
-    Personal Integrity
+    Professionalism & Personal Integrity
+        Maintain professional conduct; don’t let personal feelings or beliefs interfere.
+        Own your mistakes
+
     Privacy
+        only access private information when necessary
+
     Laws and Policies
+        educate yourself and others on relevant laws, regulations, Policies
+
+    Communication
+        communicate clearly, openly with your users, management, colleagues
+
+    Education & Community
+        continuously educate yourself, enhance your technical knowledge
+        build ties with peers at other organizations
+        partake in meetups, Community events, mailing lists.
+    
     System Integrity
-    Education
     Social Responsibility
     Ethical Responsibility
+
+Data is a liability
+
+We are at the political layer on the OSI stack
 
 SysAdmin is a privileged position
 
