@@ -1,6 +1,27 @@
+HTTPS stands for HTTP Secure
+
+TLS - Transport Layer Security
+
+Protocol:
+    Client Hello, present list of supported cipher suites
+    Server Hello, chosen cipher suite
+    Server Certificate
+    (Server Key Exchange Message), (Client Certificate Request), (ClientCertificate)
+    Client Key Exchange Message(Certificate Verify)
+    (Client Change Cipher Spec), (Server Change Cipher Spec)
+
+Just because a site has a valid certificate does not mean it’s atrustworthy site.
+
 Email is not going to be replaced
 
 More than 70% of the emails are spam
+
+The Mail system is divided into:
+    Mail User Agent (MUA)
+    Mail Transfer Agent (MTA)
+    Mail Delivery Agent (MDA)
+    
+Many MUAs now interpret HTML
 
 SMTP codes consists of 3 digits in 5 classes:
     1xx– Mail server has accepted the command, but does not yet takeany action. A confirmation message is required
@@ -18,13 +39,6 @@ SMTP uses port 25 for relaying messages from one server to another
 Mail may be relayed or processed by many servers in transit
 transport is in clear text
 Authenticity is not guaranteed
-
-The mail system is divided into 3 parts:
-    MUA
-    MTA
-    MDA
-
-Many MUAs now interpret HTML
 
 Sender Policy Framework can help detect email spoofing by identifying the list of allowed sending MXs
 
