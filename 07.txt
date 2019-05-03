@@ -1,14 +1,21 @@
+Falsehoods Programmers believe about time:
+    There are always 24 hours in a day.
+
 AWS US-EAST-1 Region downtime leads to outages and connectivitydegradation for Atlassian’s Bitbucket, Confluence, and Jira, GitHub,MongoDB, NewVoiceMedia, Slack, Twilio, Zillow.
 
 The domain name space contains a tree of domain names
 
 Domain names are read fro left to right and seperated by  "."
 
-A host name with a domain name is known as a FQDN
+A host name with a domain name is known as a FQDN (Fully Qualified Domain Name)
 
 Before the DNS, the Network Information Center (NIC) at Stanford Research Institute (SRI) allocated domain names. 
 
-The domain name space is a tree; if you control one node, you control allthe branches and subtrees.
+IANA manages the root zone (.)
+
+The domain name space is a tree; if you control one node, you control all the branches and subtrees.
+
+DNS (Domain Name Server) is a distributed system.
 
 There are 13 root authorities
 
@@ -23,7 +30,16 @@ HTTP is a request/response protocol:
     client sends a request to the server
     server responds
 
+Server status codes:
+    1xx– Informational; Request received, continuing process
+    2xx– Success; The action was successfully received, understood,and accepted
+    3xx– Redirection; Further action must be taken in order to completethe request
+    4xx– Client Error; The request contains bad syntax or cannot befulfilled
+    5xx– Server Error; The server failed to fulfill an apparently validrequest
+
 HTTP is a Transfer Protocol– serving data, not any specific text format.
+
+HTTP traffic usually is very asymmetric
 
 HTTP 2.0 is out now but we still use HTTP 1.1 as it is currently the dominant one.
 
@@ -37,4 +53,4 @@ CDN implications
     CDN sees all trafic
     CDN controls certificate keys
 
-Both HTTP and DNS are trivial to set up.
+Both HTTP and DNS are trivial to set up but are not trivial to get right.
