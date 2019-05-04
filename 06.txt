@@ -3,9 +3,22 @@ What happens when we execute a command?
     sends command
     receives data
 
-Connect to remote host:
+Connection to remote host:
     look up host name
     open connection to IP address
+
+Looking up a hostname:
+    look up various local files
+    open a connection to a DNS server's IP
+    ask DNS server to resolve hostname
+    get back IP
+
+Working:
+    determine which name server to query
+    ask who has a route to the nameserver
+    open socket to well defined port on remote IP
+    send queries
+    open socket to requested port on remote IP
 
 tcpdump is a packet analyzer
 
