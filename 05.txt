@@ -1,11 +1,12 @@
 7 OSI Layers
+    Mnemonic - Past Does Not Tell Someones Present Application
 
 IPv4 is 32 bits
     ex. 11111111 00000000 11110000 00001111
 
 Each IPv4 consists of 4 octets.
 
-IPv4 address are divided into 2 parts:
+IPv4 address are divided into 2 parts by the netmask:
     Network part
     Host part
 
@@ -18,19 +19,193 @@ Last address on the subnet= Broadcast address
 
 The Internet Assigned Numbers Authority (IANA) oversees global IP address/AS number allocation,root zone management etc.
 
-IPv4 address space depletion is a major worry as more and more devices are added.
+Regional Internet Registries (RIR) manage the allocation and registration of Internet number resources within a region of the world.
+
+RIRs assign blocks of IP addresses to the Local Internet Registries(LIR).
+
+LIRs are either ISPs, enterprises using a lot of addresses, or academic institutions.
+
+IPv4 address space depletion is a major worry as more and more devices are added. Since IPv4 is 32 bit, it can only have 2^32 addresses.
 
 IPv6 are 128 bits
 i.e. 2^128 addresses
+i.e. 6.62 addresses for every atom of the world population combined.
 
-Representation: 8x16 bit fields (words) in case insensitive colon hexadecimalrepresentation.
+Representation: 8x16 bit fields (words) in case insensitive colon hexadecimal representation.
     ex. 2031:0000:0000:030F:0000:0000:0000:130B
+
+Leading zeros in a field are optional:
+i.e. 2031:0:0:30F:0:0:0:130B == 2031:0:0:30F::130B == 2031::30F:0:0:0:130B
+
+0000:0000:0000:0000:0000:0000:0000:00001 == 0:0:0:0:0:0:0:1 == ::1
 
 You need brackets to distinguish a port from an address:
     IPv4:66.163.162.9:22
     IPv6:[2001:470:1f07:3d1::1]:22
 
+There are 3 kinds of Address scopes:
+    Link-Local (example: fe80::e276:63ff:fe72:3900%xennet0)
+        Used on a single link
+        Packets with link-local source or destination addresses are not forwarded to other links
+    
+    Unique-Local (fc00::/7)
+        Used for private IPv6 networks
+        Not globally routable
+        Applications similar to RFC 1918
+    
+    Global (example:2001:470:1f07:3d1::1)
+        A globally unique address
+        Packets with global addresses can be forwarded to any part of the global network
+
+Autonomous System Numbers (ASNs) are assigned by IANA to the RIRs.
+
+One can query databases on the internet about e.g. IP block or ASNinformation via the WHOIS protocol.
+    Example: whois www.stevens.edu using www.domaintools.com returns the following result:
+        Domain Name: STEVENS.EDU
+
+        Registrant:
+                Stevens Institute of Technology
+                Castle Point on Hudson
+                Information Technology
+                Hoboken, NJ 07030
+                United States of America
+
+        Administrative Contact:
+                Domain Name Administration
+                Stevens Institute of Technology
+                Information Technology
+                Castle Point on the Hudson
+                Hoboken, NJ 07030
+                United States of America
+                +1.2012165457
+                
+
+        Technical Contact:
+                Domain Name Administration
+                Stevens Institute of Technology
+                Information Technology
+                Castle Point on the Hudson
+                Hoboken, NJ 07030
+                United States of America
+                +1.2012165457
+                
+
+        Name Servers:
+                DRDNS2.STEVENS.EDU
+                SITULT.STEVENS-TECH.EDU
+                NRAC.STEVENS-TECH.EDU
+
+        Domain record activated:    25-Jun-1998
+        Domain record last updated: 26-Sep-2018
+        Domain expires:             31-Jul-2019
+
 Traceroute is used to find the path the packet takes.
+Example: Traceroute to www.cs.stevens.edu gave the following results:
+
+    Hop number:  1
+    Connected to:  assc-ultrafw-vlan2598.dc10.neustar.com ( 10.176.98.1 )
+    Roundtrip times:  2.566 ms
+    2.534 ms
+    2.588 ms
+    Hop number:  2
+    Connected to:  ashlfnsw02-vlan102.dc10.neustar.com ( 10.176.2.3 )
+    Roundtrip times:  2.813 ms
+    2.851 ms
+    2.83 ms
+    Hop number:  3
+    Roundtrip times:  Timed out.
+    Hop number:  4
+    Connected to:  ashihnrtr01-vlan502.dc10.neustar.com ( 156.154.196.2 )
+    Roundtrip times:  6.579 ms
+    6.551 ms
+    6.483 ms
+    Country:  united states
+    Hop number:  5
+    Connected to:  et-0-0-43-3.cr2-was1.ip4.gtt.net ( 173.205.39.229 )
+    Roundtrip times:  11.166 ms
+    11.653 ms
+    11.138 ms
+    Country:  germany
+    Hop number:  6
+    Connected to:  et-0-0-35.cr1-was1.ip4.gtt.net ( 213.200.115.178 )
+    Roundtrip times:  6.533 ms
+    1.936 ms
+    3.502 ms
+    Country:  united states
+    Hop number:  7
+    Connected to:  as1299.cr1-was1.ip4.gtt.net ( 216.221.156.206 )
+    Roundtrip times:  5.025 ms
+    4.989 ms
+    4.955 ms
+    Country:  united states
+    Hop number:  8
+    Connected to:  ash-bb3-link.telia.net ( 80.91.248.156 )
+    Roundtrip times:  10.733 ms
+    10.753 ms
+    11.196 ms
+    Country:  sweden
+    Hop number:  9
+    Roundtrip times:  Timed out.
+    Hop number:  10
+    Connected to:  nyk-b2-link.telia.net ( 213.155.130.28 )
+    Roundtrip times:  9.724 ms
+    8.325 ms
+    6.739 ms
+    Country:  united states
+    Hop number:  11
+    Connected to:  njedge-ic-312218-nyk-b2.c.telia.net ( 62.115.54.158 )
+    Roundtrip times:  9.3 ms
+    9.243 ms
+    8.099 ms
+    Country:  france
+    Hop number:  12
+    Connected to:  130.156.34.246 ( 130.156.34.246 )
+    Roundtrip times:  8.074 ms
+    7.812 ms
+    7.924 ms
+    Country:  united states
+    Hop number:  13
+    Connected to:  130.156.251.106 ( 130.156.251.106 )
+    Roundtrip times:  7.85 ms
+    7.897 ms
+    8.807 ms
+    Country:  united states
+    Hop number:  14
+    Roundtrip times:  Timed out.
+    Hop number:  15
+    Roundtrip times:  Timed out.
+    Hop number:  16
+    Roundtrip times:  Timed out.
+    Hop number:  17
+    Roundtrip times:  Timed out.
+    Hop number:  18
+    Roundtrip times:  Timed out.
+    Hop number:  19
+    Roundtrip times:  Timed out.
+    Hop number:  20
+    Roundtrip times:  Timed out.
+    Hop number:  21
+    Roundtrip times:  Timed out.
+    Hop number:  22
+    Roundtrip times:  Timed out.
+    Hop number:  23
+    Roundtrip times:  Timed out.
+    Hop number:  24
+    Roundtrip times:  Timed out.
+    Hop number:  25
+    Roundtrip times:  Timed out.
+    Hop number:  26
+    Roundtrip times:  Timed out.
+    Hop number:  27
+    Roundtrip times:  Timed out.
+    Hop number:  28
+    Roundtrip times:  Timed out.
+    Hop number:  29
+    Roundtrip times:  Timed out.
+    Hop number:  30
+    Roundtrip times:  Timed out.
+
+The internet is a physical place.
 
 Ethernet is a layer 2 protocol - Data Link layer.
 
