@@ -26,7 +26,8 @@ Multi-user systems come with their own implications:
     Scalability graph needs to be exponential
     users may want to keep files private
     users may want to share files
-    users may (try to gain) access to files they shouldn’t have access tousers may (want to) do things that affect other users
+    users may (try to gain) access to files they shouldn’t have access to
+    users may (want to) do things that affect other users
     different users may require different privileges
 
 Granting privileges requires trust
