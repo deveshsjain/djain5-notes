@@ -1,3 +1,5 @@
+OS installation is an ordered process ending with System reboot.
+
 Software can be classified into 2 categories:
     System Software
     Third Party Software
@@ -10,7 +12,7 @@ Most programming languages or environments come with their own package managemen
 
 You don't get to choose, you routinely need to build from source and re-package your Software.
 
-Mirroring untrusted, unverified dependenciesdoes not solve any of our problems.
+Mirroring untrusted, unverified dependencies does not solve any of our problems.
 
 Integrity verification is meaningless without assurance of trust.
 
@@ -18,4 +20,54 @@ Dependencies are called dependencies because we depend on them.
 
 Dependency trust and integrity is recursive.
 
+Multi-user systems come with their own implications:
+    Regular run-ins with the law
+    Conflicts between users
+    Scalability graph needs to be exponential
+    users may want to keep files private
+    users may want to share files
+    users may (try to gain) access to files they shouldn’t have access tousers may (want to) do things that affect other users
+    different users may require different privileges
+
+Granting privileges requires trust
+    The more groups you have, the weaker the trust bonds are.
+    Trust does not scale.
+
 Authentication is proof of identity, not proof of authorization.
+
+Authentication is done using something you know/ something you have/ something you are
+
+Using multifactor Authentication can be helpful to some extent for Authentication.
+
+Every Unix account:
+    has a unique ID
+    belongs to at least one group
+    may or may not be password protected
+    may or may not have a valid login program
+    may or may not be allowed to escalate privileges
+
+Every Unix file:
+    is associated with a uid and a gid
+    has a number of protection bits
+
+Some tasks require special privileges. Example: Binding the port, changing local passwords.
+Pretty much anything related to file systems
+
+Unix groups enable arbitary collections of users to share resources. Limited to 16 to 32 members per group.
+
+Even in the smallest environments, we find:
+    a central user database
+    users divided into different access groups
+    access to systems is granted primarily by such group membership
+    privileges on a system are also granted by such group membership
+
+The privileges granted in this manner are commonly broken down and controlled via role-based access control(RBAC).
+
+Multi-user truths:
+    All users are equal.
+    Some users are more equal than others.
+    The principle of least privilege applies to all.
+    Humans require trust.
+    Trust does not scale.
+    You will always face trade-offs.
+
